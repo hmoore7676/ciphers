@@ -1,0 +1,30 @@
+# ciphers
+alphabet = " !\"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`{|}~"
+key = "FPJV^g!rx\"]Rk#'yzsjn=<K69D-o1WAwEZ|B,{)0mS_tG$>c+3\?b\MdTY[/`elICia~5h47u@;XQ(vO%&LHUf2:.p*8}qN"
+
+def encrypt(message):
+    result = ""
+
+    for letter in message:
+        loc = alphabet.find(letter)
+        result += key[loc]
+
+    return result
+
+def decrypt(message):
+    result = ""
+
+    for letter in message:
+        loc = key.find(letter)
+        result += alphabet[loc]
+
+    return result
+
+
+unencrypted_message = "helLOOOoooo!!!!!!"
+encrypted_message = encrypt(unencrypted_message)
+decrypted_message = decrypt(encrypted_message)
+
+print(unencrypted_message)
+print(encrypted_message)
+print(decrypted_message)
