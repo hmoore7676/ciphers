@@ -16,6 +16,6 @@ def decrypt(message, shift_amount):
     return encrypt(message,-1 * shift_amount)
 
 secret_message = "helloO how are YOU!?~"
-encrypted_message = encrypt(secret_message, 3)
+encrypted_message = encrypt(secret_message, 5)
 
 print(encrypted_message)
